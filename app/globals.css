@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base theme + RTL */
+:root { color-scheme: dark; }
+html { direction: rtl; }
+body { @apply bg-slate-950 text-slate-100; text-align: right; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Kufi Arabic", Helvetica, Arial; }
+
+/* --- VN Layout --- */
+.vn-container { position: relative; width: 100%; height: 100dvh; overflow: hidden; }
+.vn-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* Characters ABOVE the dialogue bar */
+.vn-char {
+  position: absolute;
+  bottom: 35vh;           /* sit above the dialogue strip */
+  height: 40vh;
+  max-height: 20rem;
+  z-index: 20;
+}
+.vn-char.left   { left: 1rem; }
+.vn-char.center { left: 50%; transform: translateX(-50%); }
+.vn-char.right  { right: 1rem; }
+
+@media (max-width: 640px) {
+  .vn-char {
+    height: 32vh;
+    bottom: 35vh;        /* keep same clearance on phones */
+  }
+}
+
+/* Dialogue bar PINNED BELOW the sprites (never covers them) */
+.dialogue {
+  position: fixed;        /* stick to viewport bottom */
+  bottom: 0; left: 0; right: 0;
+  z-index: 30;            /* above bg/sprites */
+  background: rgba(0,0,0,0.75);
+  padding: 1rem;
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom)); /* iOS safe area */
+  max-height: 35vh;       /* leaves room for sprites */
+  overflow-y: auto;       /* long lines scroll inside the bar */
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/* Text + choices (larger, white, responsive) */
+.dialogue-inner {
+  color: #fff;
+  font-size: clamp(1.1rem, 2.8vw, 1.5rem); /* auto-scale */
+  line-height: 1.7;
+  text-align: right;
+}
+
+.dialogue-text { /* optional direct class if you use it on <p> */
+  font-size: clamp(1.1rem, 2.8vw, 1.5rem);
+  line-height: 1.7;
+  color: #fff;
+  text-align: right;
+}
+
+/* Buttons in the dialogue bar */
+.dialogue button {
+  color: #fff;
+  border-radius: 1rem;
+  border: 1px solid rgba(148,163,184,.25);
+  background: rgba(15,23,42,.9);
+}
+.dialogue button:hover { background: rgba(30,41,59,.95); }

@@ -1,0 +1,10 @@
+# dependencies
+node_modules
+
+# next build output
+.next
+out
+
+# OS junk
+.DS_Store
+Thumbs.db
