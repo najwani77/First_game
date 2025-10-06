@@ -16,11 +16,20 @@ export default function RootLayout({ children }) {
   <script
     dangerouslySetInnerHTML={{
       __html: `
-        if ('serviceWorker' in navigator) {
-          window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js');
-          });
-        }`
+        (function () {
+          var v = "${process.env.NEXT_PUBLIC_DEPLOY_ID}";
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+              navigator.serviceWorker.register('/sw.js?v=' + v).then(function (reg) {
+                // When the new SW takes control, refresh once to show the newest build
+                navigator.serviceWorker.addEventListener('controllerchange', function () {
+                  if (!window.__reloaded) { window.__reloaded = true; window.location.reload(); }
+                });
+              });
+            });
+          }
+        })();
+      `,
     }}
   />
 )}
