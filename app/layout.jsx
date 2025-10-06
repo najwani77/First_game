@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "لعبة البوصلة الأخلاقية",
-  description: "قصة تفاعلية قصيرة بنمط رواية مصورة – عربية بالكامل",
+  title: "قف من أنت",
+  description: "لعبة تفاعلية",
   manifest: "/manifest.webmanifest"
 };
 
