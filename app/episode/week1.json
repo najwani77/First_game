@@ -1,0 +1,136 @@
+Skip to content
+Sajjad's projects
+Sajjad's projects
+
+Hobby
+
+first-game
+
+FBmKvkDP4
+
+
+
+Find…
+F
+
+Source
+Output
+public/episodes/week1.JSON
+
+    "boycott": "المقاطعة"
+  },
+  "questions": [
+    {
+      "id": "q1_companions",
+      "type": "instagram_reference",
+      "category": "خلص الأصحاب",
+      "background": "malik.png",
+      "instagramHandle": "@your_account",
+      "storyTitle": "مالك الأشتر",
+      "body": "مالك الأشتر, من خلص أصحاب النبي محمد - صلى الله عليه و آله و سلم - و الامام علي - عليه السلام -. سمي بالأشتر لأن أحد عينيه قد شترت في أحد معارك المسلمين, فما اسم هذه المعركة؟",
+      "choices": [
+        {
+          "text": "معركة ذات السلاسل",
+          "delta": 0,
+          "isCorrect": false,
+          "feedback": "خطأ. الإجابة الصحيحة هي معركة اليرموك"
+        },
+        {
+          "text": "معركة اليرموك",
+          "delta": 3,
+          "isCorrect": true,
+          "feedback": "صحيح! شُترت عينه في معركة اليرموك الشهيرة"
+        },
+        {
+          "text": "معركة صفين",
+          "delta": 0,
+          "isCorrect": false,
+          "feedback": "خطأ. الإجابة الصحيحة هي معركة اليرموك"
+        },
+        {
+          "text": "معركة النهروان",
+          "delta": 0,
+          "isCorrect": false,
+          "feedback": "خطأ. الإجابة الصحيحة هي معركة اليرموك"
+        }
+      ]
+    },
+    {
+      "id": "q2_habits",
+      "type": "instagram_reference",
+      "category": "من واقع الحياة",
+      "background": "hunger.png",
+      "instagramHandle": "@your_account",
+      "storyTitle": "الإسراف في الطعام",
+      "body": "يُعد الإسراف في الطعام من القضايا العالمية الخطيرة، إذ يتم إهدار جزء كبير من الغذاء الذي يُنتَج سنويًا.\nفما مقدار الطعام الذي يُهدر تقريبًا من إجمالي الإنتاج الغذائي في العالم؟",
+      "choices": [
+        {
+          "text": "النصف",
+          "delta": 0,
+          "isCorrect": false,
+          "feedback": "خطأ. الإجابة الصحيحة هي الثلث"
+        },
+        {
+          "text": "الربع",
+          "delta": 0,
+          "isCorrect": false,
+          "feedback": "خطأ. الإجابة الصحيحة هي الثلث"
+        },
+        {
+          "text": "الثلث",
+          "delta": 3,
+          "isCorrect": true,
+          "feedback": "صحيح! يُهدر تقريباً ثلث الإنتاج الغذائي العالمي سنوياً"
+        },
+        {
+          "text": "ثلاثة أرباع",
+          "delta": 0,
+          "isCorrect": false,
+          "feedback": "خطأ. الإجابة الصحيحة هي الثلث"
+        }
+      ]
+    },
+    {
+      "id": "q3_boycott",
+      "type": "situational",
+      "category": "قف من أنت",
+      "background": "school_canteen.png",
+      "dialogue": [
+        {
+          "speaker": "ali",
+          "expression": "serious",
+          "text": "قررت ما أشتري من الشركات اللي تدعم الاحتلال، لازم يكون لنا موقف."
+        },
+        {
+          "speaker": "meetham",
+          "expression": "thinking",
+          "text": "أنا أتفق، بس بعض المنتجات صعب نلقى لها بديل... شو نسوي؟"
+        }
+      ],
+      "body": "ثم التفتا إليك وسألاك: لو كنتَ مكانهما، ماذا ستفعل؟",
+      "choices": [
+        {
+          "text": "أبحث عن بدائل محلية أو منتجات أخرى لا تدعم الاحتلال.",
+          "delta": 3,
+          "feedback": "ممتاز! البحث عن البدائل هو الحل الأمثل"
+        },
+        {
+          "text": "أشتري فقط عند الحاجة الضرورية، وأحاول أنشر الوعي بين زملائي.",
+          "delta": 2,
+          "feedback": "جيد! التقليل والتوعية خطوة مهمة"
+        },
+        {
+          "text": "أواصل شراء ما أحتاجه، لكن أتبرع بجزء من مصروفي لدعم القضية.",
+          "delta": 1,
+          "feedback": "التبرع مفيد، لكن المقاطعة أكثر تأثيراً"
+        },
+        {
+          "text": "أناقش أصدقائي ومعلميّ لأفهم أبعاد القضية أكثر قبل اتخاذ أي موقف.",
+          "delta": 2,
+          "feedback": "رائع! الفهم العميق يساعد في اتخاذ قرارات أفضل"
+        }
+      ]
+    }
+  ]
+}
+first-game – Deployment Source – Vercel

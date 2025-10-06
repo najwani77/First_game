@@ -18,7 +18,7 @@ export default function EpisodePage({ params }) {
   useEffect(() => {
     async function loadEpisode() {
       try {
-const res = await fetch(`/episodes/${params.slug}.json`);
+fetch(`/episodes/${params.slug}.json`, { cache: "no-store" })
         const data = await res.json();
         
         // Clear any previous attempt score
