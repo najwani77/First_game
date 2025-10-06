@@ -18,7 +18,7 @@ export default function EpisodePage({ params }) {
   useEffect(() => {
     async function loadEpisode() {
       try {
-        const res = await fetch(`/episodes/${params.slug}.json`);
+const res = await fetch(`https://first-game-swart-three.vercel.app/episodes/${params.slug}.json`);
         const data = await res.json();
         
         // Clear any previous attempt score
