@@ -1,16 +1,21 @@
+// bump this when you deploy new versions so clients update
+const CACHE = "moral-cache-v4";
+
 self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(["/", "/manifest.webmanifest"])));
+  e.waitUntil(
+    caches.open(CACHE).then((c) => c.addAll(["/", "/manifest.webmanifest"]))
+  );
 });
 
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url);
 
-  // never cache Next.js build assets
+  // Never cache Next.js build assets
   if (url.pathname.startsWith("/_next/")) return;
 
-  // never cache episode JSON (we always want fresh)
+  // Always fetch fresh episode JSON
   if (url.pathname.startsWith("/episodes/")) return;
 
-  // cache-first for the rest (images, icons, etc.)
+  // Cache-first for everything else (images, icons, etc.)
   e.respondWith(caches.match(e.request).then((r) => r || fetch(e.request)));
 });

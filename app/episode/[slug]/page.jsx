@@ -18,8 +18,14 @@ export default function EpisodePage({ params }) {
   useEffect(() => {
     async function loadEpisode() {
       try {
-fetch(`/episodes/${params.slug}.json`, { cache: "no-store" })
-        const data = await res.json();
+const url = `/episodes/${params.slug}.json`;
+const res = await fetch(url, { cache: "no-store" });
+if (!res.ok) {
+  const t = await res.text();
+  throw new Error(`Failed to load ${url}: ${res.status} ${res.statusText}\n${t}`);
+}
+const data = await res.json();
+
         
         // Clear any previous attempt score
         localStorage.setItem('currentAttemptScore', '0');

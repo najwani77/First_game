@@ -1,22 +1,10 @@
-Skip to content
-Sajjad's projects
-Sajjad's projects
-
-Hobby
-
-first-game
-
-FBmKvkDP4
-
-
-
-Find…
-F
-
-Source
-Output
-public/episodes/week1.JSON
-
+{
+  "id": "week1",
+  "title": "الأسبوع الأول",
+  "weekNumber": 1,
+  "themes": {
+    "companions": "مالك الأشتر",
+    "habits": "الإسراف في الطعام",
     "boycott": "المقاطعة"
   },
   "questions": [
@@ -133,4 +121,3 @@ public/episodes/week1.JSON
     }
   ]
 }
-first-game – Deployment Source – Vercel
